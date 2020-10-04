@@ -19,10 +19,8 @@
 
 * New offline reinforcement learning algorithms such as [BCQ](https://arxiv.org/abs/1812.02900) rely on the overlap assumption, but this work concentrates on off policy reinforcement learning without full data coverage.
 
-* This paper proposes a few small tabular environments that illustrate some of the problem with current baselines. Their experiments show that the baselines fail when rare states are present, which causes overestimation of values;
+* This paper proposes a few small tabular environments that illustrate some of the problem with current baselines. Their experiments show that the baselines fail when rare states are present, which causes overestimation of values. Because the environments are tabular, the authors implement modified versions of Policy Iteration (PI) and Value Iteration (VI).
 
-* The method introduced by this work is to pessimistic values for the state-action space with insufficient data. They implement this via a filtration function <img src="https://i.upmath.me/svg/%5Czeta%20(s%2C%20a%3B%20%5Cmu%2C%20b)%20%3D%201_%7B%5Cmu(s%2C%20a)%20%3E%20b%7D%7D" alt="\zeta (s, a; \mu, b) = 1_{\mu(s, a) &gt; b}}" />. This function is introduced in the Bellman evaluation operator, which is equivalent to assuming zero rewards for the filtered tuples.
-
-* An interpretation is that this methods (implicitly) defines a class of policies with sufficient support and it tries to do the best it can within that support.
+* The method introduced by this work is to pessimistic values for the state-action space with insufficient data. They implement this via a filtration function <img src="https://i.upmath.me/svg/%5Czeta%20(s%2C%20a%3B%20%5Cmu%2C%20b)%20%3D%201_%7B%5Cmu(s%2C%20a)%20%3E%20b%7D%7D" alt="\zeta (s, a; \mu, b) = 1_{\mu(s, a) &gt; b}}" />. This function is introduced in the Bellman evaluation operator, which is equivalent to assuming zero rewards for the filtered tuples. An interpretation is that this method (implicitly) defines a class of policies with sufficient support and it tries to do the best it can within that support.
 
 * Finally, the theoretical result are error bounds on PI and VI, which I will not reproduce here but can be found on the linked paper.
