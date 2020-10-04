@@ -6,3 +6,4 @@ This day focused on Offline Reinforcement Learning, in which the agent is traine
 
 * [MOPO: Model-Based Offline Policy Optimization](mopo.md);
 * [Learning from the Past Without Great Exploration](mbs.md);
+* [Offline Deep Reinforcement Learning Algorithms](cql.md);
